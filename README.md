@@ -11,7 +11,7 @@ money(1000.5, 'PLN');   // -> 1 000,50 zł
 * PLN
 * EUR
 * USD
-* GPB
+* GBP
 * JPY
 * CZK
 * SEK
