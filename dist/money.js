@@ -29,8 +29,8 @@
             symbol: '$',
             format: '{{symbol}}{{value}}'
         },
-        GPB: {
-            code: 'GPB',
+        GBP: {
+            code: 'GBP',
             decimal: '.',
             thousand: ',',
             symbol: '£',
