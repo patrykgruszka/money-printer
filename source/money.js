@@ -63,7 +63,7 @@
         iso = iso || '';
 
         var currency = currencyList[iso] || {},
-            number = parseFloat(value) || 0,
+            number = parseFloat(String(value).replace(',', '.')) || 0,
             places = currency.precision || defaults.precision,
             symbol = currency.symbol || iso || defaults.symbol,
             format = currency.format || defaults.format,

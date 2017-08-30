@@ -20,6 +20,10 @@ describe('money', function() {
         expect(money(10.99)).toBe(_nbsp('10,99'));
         expect(money(1000.5)).toBe(_nbsp('1 000,50'));
     });
+
+    it('should accept text values with "," as decimal separator', function() {
+        expect(money('1,99')).toBe(_nbsp('1,99'));
+    });
 });
 
 describe('PLN', function() {
@@ -28,6 +32,7 @@ describe('PLN', function() {
         expect(money(1, 'PLN')).toBe(_nbsp('1,00 zł'));
         expect(money(10.99, 'PLN')).toBe(_nbsp('10,99 zł'));
         expect(money(1000.5, 'PLN')).toBe(_nbsp('1 000,50 zł'));
+        expect(money('1,99', 'PLN')).toBe(_nbsp('1,99 zł'));
     });
 });
 
