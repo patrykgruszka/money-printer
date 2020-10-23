@@ -1,4 +1,4 @@
-# Money - currency formatting
+# Money - JavaScript currency formatting
 
 ## Basic usage
 ```javascript
