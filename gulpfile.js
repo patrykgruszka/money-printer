@@ -24,7 +24,7 @@ function scripts() {
 
 function tests(done) {
     new karmaServer({
-        configFile: __dirname + '/karma.conf.js',
+        configFile: __dirname + '/karma.conf.js'
     }, done).start();
 }
 

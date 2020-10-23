@@ -1,4 +1,14 @@
-(function(window) {
+(function(global, money) {
+    if (typeof exports === 'object' && typeof module !== 'undefined') {
+        module.exports = money;
+    } else if (typeof define === 'function' && define.amd) {
+        define('money', [], function() {
+            return money;
+        });
+    } else {
+        global.money = money;
+    }
+})(this, function() {
     var defaults = {
         code: 'NONE',
         precision : 2,
@@ -77,5 +87,5 @@
         return format.replace('{{symbol}}', symbol).replace('{{value}}', value);
     };
 
-    window.money = money;
-})(window);
+    return money;
+}());
