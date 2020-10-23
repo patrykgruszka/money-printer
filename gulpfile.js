@@ -1,14 +1,16 @@
-var projectName = 'money',
-    gulp = require('gulp'),
-    jshint = require('gulp-jshint'),
-    uglify = require('gulp-uglify'),
-    rename = require('gulp-rename'),
-    concat = require('gulp-concat'),
-    notify = require('gulp-notify'),
-    del = require('del'),
-    karmaServer = require('karma').Server;
+"use strict";
 
-gulp.task('scripts', function() {
+const projectName = 'money';
+const gulp = require('gulp');
+const jshint = require('gulp-jshint');
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
+const concat = require('gulp-concat');
+const notify = require('gulp-notify');
+const del = require('del');
+const karmaServer = require('karma').Server;
+
+function scripts() {
     return gulp.src('source/*.js')
         .pipe(jshint('.jshintrc'))
         .pipe(jshint.reporter('default'))
@@ -18,22 +20,26 @@ gulp.task('scripts', function() {
         .pipe(uglify())
         .pipe(gulp.dest('dist'))
         .pipe(notify({ message: 'Scripts task complete' }));
-});
+}
 
-gulp.task('test', function (done) {
+function tests(done) {
     new karmaServer({
         configFile: __dirname + '/karma.conf.js',
     }, done).start();
-});
+}
 
-gulp.task('clean', function() {
+function clean() {
     return del(['dist']);
-});
+}
 
-gulp.task('watch', function() {
+function watch() {
     gulp.watch('source/*.js', ['scripts']);
-});
+}
 
-gulp.task('default', ['clean'], function() {
-    gulp.start('test', 'scripts', 'watch');
-});
+const build = gulp.series(clean, tests, scripts, watch);
+
+exports.scripts = scripts;
+exports.tests = tests;
+exports.clean = clean;
+exports.watch = watch;
+exports.default = build;
