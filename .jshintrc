@@ -1,13 +1,8 @@
 {
-  // JSHint Default Configuration File (as on JSHint website)
-  // See http://jshint.com/docs/ for more details
-
   "maxerr"        : 50,       // {int} Maximum error before stopping
-
-  // Enforcing
-  "bitwise"       : true,     // true: Prohibit bitwise operators (&, |, ^, etc.)
+  "bitwise"       : false,    // true: Prohibit bitwise operators (&, |, ^, etc.)
   "camelcase"     : false,    // true: Identifiers must be in camelCase
-  "curly"         : true,     // true: Require {} for every new block or scope
+  "curly"         : false,     // true: Require {} for every new block or scope
   "eqeqeq"        : true,     // true: Require triple equals (===) for comparison
   "forin"         : true,     // true: Require filtering for..in loops with obj.hasOwnProperty()
   "freeze"        : true,     // true: prohibits overwriting prototypes of native objects such as Array, Date etc.
@@ -20,21 +15,12 @@
   "nonew"         : false,    // true: Prohibit use of constructors for side-effects (without assignment)
   "plusplus"      : false,    // true: Prohibit use of `++` and `--`
   "quotmark"      : false,    // Quotation mark consistency:
-  //   false    : do nothing (default)
-  //   true     : ensure whatever is used is consistent
-  //   "single" : require single quotes
-  //   "double" : require double quotes
   "undef"         : true,     // true: Require all non-global variables to be declared (prevents global leaks)
   "unused"        : true,     // Unused variables:
   //   true     : all variables, last function parameter
   //   "vars"   : all variables only
   //   "strict" : all variables, all function parameters
-  "strict"        : true,     // true: Requires all functions run in ES5 Strict Mode
-  "maxparams"     : false,    // {int} Max number of formal params allowed per function
-  "maxdepth"      : false,    // {int} Max depth of nested blocks (within functions)
-  "maxstatements" : false,    // {int} Max number statements per function
-  "maxcomplexity" : false,    // {int} Max cyclomatic complexity per function
-  "maxlen"        : false,    // {int} Max number of characters per line
+  "strict"        : false,     // true: Requires all functions run in ES5 Strict Mode
   "varstmt"       : false,    // true: Disallow any var statements. Only `let` and `const` are allowed.
 
   // Relaxing
@@ -70,11 +56,11 @@
   "couch"         : false,    // CouchDB
   "devel"         : true,     // Development/debugging (alert, confirm, etc)
   "dojo"          : false,    // Dojo Toolkit
-  "jasmine"       : false,    // Jasmine
+  "jasmine"       : true,     // Jasmine
   "jquery"        : false,    // jQuery
   "mocha"         : true,     // Mocha
   "mootools"      : false,    // MooTools
-  "node"          : true,    // Node.js
+  "node"          : true,     // Node.js
   "nonstandard"   : false,    // Widely adopted globals (escape, unescape, etc)
   "phantom"       : false,    // PhantomJS
   "prototypejs"   : false,    // Prototype and Scriptaculous
@@ -87,5 +73,8 @@
   "yui"           : false,    // Yahoo User Interface
 
   // Custom Globals
-  "globals"       : {}        // additional predefined global variables
+  "globals"       : {
+    "define"      : true,
+    "money"       :  true
+  }
 }
