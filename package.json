@@ -1,11 +1,18 @@
 {
   "name": "money",
-  "version": "1.0.2",
-  "description": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "2.0.0",
+  "description": "JavaScript currency formatting",
+  "homepage": "https://github.com/patrykgruszka/money",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:patrykgruszka/money.git"
   },
-  "author": "Patryk Gruszka",
+  "main": "source/money.js",
+  "scripts": {
+    "build": "gulp",
+    "test": "gulp tests"
+  },
+  "author": "patrykgruszka",
   "license": "MIT",
   "devDependencies": {
     "del": "^2.2.1",
