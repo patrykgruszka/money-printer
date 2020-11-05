@@ -36,7 +36,7 @@ function watch() {
     gulp.watch('source/*.js', ['scripts']);
 }
 
-const build = gulp.series(clean, tests, scripts, watch);
+const build = gulp.series(clean, scripts);
 
 exports.scripts = scripts;
 exports.tests = tests;
