@@ -1,11 +1,11 @@
 {
-  "name": "money",
+  "name": "money-printer",
   "version": "2.0.0",
   "description": "JavaScript currency formatting",
-  "homepage": "https://github.com/patrykgruszka/money",
+  "homepage": "https://github.com/patrykgruszka/money-printer",
   "repository": {
     "type": "git",
-    "url": "git@github.com:patrykgruszka/money.git"
+    "url": "git@github.com:patrykgruszka/money-printer.git"
   },
   "main": "source/money.js",
   "scripts": {
