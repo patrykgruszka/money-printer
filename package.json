@@ -1,6 +1,6 @@
 {
   "name": "money-printer",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "JavaScript currency formatting",
   "homepage": "https://github.com/patrykgruszka/money-printer",
   "repository": {
@@ -28,5 +28,11 @@
     "karma": "^5.2.3",
     "karma-chrome-launcher": "^1.0.1",
     "karma-jasmine": "^1.0.2"
-  }
+  },
+  "keywords": [
+    "currency",
+    "money",
+    "accounting",
+    "format"
+  ]
 }

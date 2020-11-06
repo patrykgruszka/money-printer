@@ -1,7 +1,14 @@
-# Money - JavaScript currency formatting
+# Money printer - JavaScript currency formatting
+
+## Installation
+```
+npm i money-printer --save
+```
 
 ## Basic usage
 ```javascript
+var money = require('money-printer');
+
 money.print(1000.5, 'EUR');   // "1 000.50 €"
 money.print(1000.5, 'USD');   // "$1,000.50"
 money.print(1000.5, 'GBP');   // "£1,000.50"
