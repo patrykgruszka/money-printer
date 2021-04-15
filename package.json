@@ -1,6 +1,6 @@
 {
   "name": "money-printer",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "JavaScript currency formatting",
   "homepage": "https://github.com/patrykgruszka/money-printer",
   "repository": {
